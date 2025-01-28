@@ -1,3 +1,4 @@
+local Gui = {}
 function ClosedUi()
 	--ClearHG()
 	--ClearEsp()
