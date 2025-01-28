@@ -1255,3 +1255,62 @@ local TextButton = Tab.Toggle({
 	end,
 })
 
+local Tab1 = Ui.CreateTab('Theme')
+local TextButton = Tab1.TextButton({
+	Name = "Dark Theme", 
+	MouseEffect = true, -- Changing mouse Icon When you enter the ui
+	CallBack = function(Number)
+		Ui.ChangeTheme('Dark')
+	end,
+})
+local TextButton = Tab1.TextButton({
+	Name = "Light Theme", 
+	MouseEffect = true, -- Changing mouse Icon When you enter the ui
+	CallBack = function(Number)
+		Ui.ChangeTheme('Light')
+	end,
+})
+
+local TextButton = Tab1.TextButton({
+	Name = "Crystal Theme", 
+	MouseEffect = true, -- Changing mouse Icon When you enter the ui
+	CallBack = function(Number)
+		Ui.ChangeTheme('Crystal')
+	end,
+})
+
+local TextButton = Tab1.TextButton({
+	Name = "Aqua Theme", 
+	MouseEffect = true, -- Changing mouse Icon When you enter the ui
+	CallBack = function(Number)
+		Ui.ChangeTheme('Aqua')
+	end,
+})
+local TextButton = Tab1.TextButton({
+	Name = "Tropical Theme", 
+	MouseEffect = true, -- Changing mouse Icon When you enter the ui
+	CallBack = function(Number)
+		Ui.ChangeTheme('Tropical')
+	end,
+})
+local TextButton = Tab1.TextButton({
+	Name = "Frost Theme", 
+	MouseEffect = true, -- Changing mouse Icon When you enter the ui
+	CallBack = function(Number)
+		Ui.ChangeTheme('Frost')
+	end,
+})
+local TextButton = Tab1.TextButton({
+	Name = "Cyber Theme", 
+	MouseEffect = true, -- Changing mouse Icon When you enter the ui
+	CallBack = function(Number)
+		Ui.ChangeTheme('Cyber')
+	end,
+})
+local TextButton = Tab1.TextButton({
+	Name = "Retro Theme", 
+	MouseEffect = true, -- Changing mouse Icon When you enter the ui
+	CallBack = function(Number)
+		Ui.ChangeTheme('Retro')
+	end,
+})
