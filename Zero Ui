@@ -1,4 +1,85 @@
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local StarterPlayer = game:GetService("StarterPlayer")
+local TweenService = game:GetService("TweenService")
+
 local Gui = {}
+--[[function GiveEsp(Parent)
+	-- Gui to Lua
+	-- Version: 3.2
+
+	-- Instances:
+
+	if Parent  then
+		local Esp = Instance.new("BillboardGui")
+		local EspLol = Instance.new("TextLabel")
+
+		--Properties:
+
+		Esp.Name = "Esp"
+		Esp.Parent = Parent
+		Esp.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+		Esp.Active = true
+		Esp.AlwaysOnTop = true
+		Esp.LightInfluence = 1.000
+		Esp.Size = UDim2.new(17, 0, 6, 0)
+		Esp.StudsOffset = Vector3.new(0, 5, 0)
+
+		EspLol.Name = "EspLol"
+		EspLol.Parent = Esp
+		EspLol.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		EspLol.BackgroundTransparency = 1.000
+		EspLol.BorderColor3 = Color3.fromRGB(0, 0, 0)
+		EspLol.BorderSizePixel = 0
+		EspLol.Size = UDim2.new(1, 0, 1, 0)
+		EspLol.Font = Enum.Font.SourceSans
+		EspLol.Text = "["..Parent.Parent.Name.."]"
+		EspLol.TextColor3 = Color3.fromRGB(85, 255, 0)
+		EspLol.TextScaled = true
+		EspLol.TextSize = 14.000
+		EspLol.TextWrapped = true
+		local STR = Instance.new('UIStroke',EspLol)
+		STR.Thickness = 3
+	end
+end
+
+function ClearEsp()
+	for _,v in workspace:GetDescendants() do
+		if v.Name == "Esp" and v:IsA('BillboardGui') then
+			v:Destroy()
+		end
+	end
+end
+
+function GiveHighligh(Char)
+	local H = Instance.new('Highlight')
+	H.FillColor = Color3.new(0.333333, 1, 0)
+	H.FillTransparency = 0.7
+	H.OutlineColor = Color3.fromRGB(255,0,0)
+	H.OutlineTransparency = 0
+	H.Parent = Char
+	H.Name = "Light"
+end
+function GiveBeam(Char)
+	local H = Instance.new('Beam')
+	H.FaceCamera = true
+	H.Width0 = 1
+	H.Width1 = 1
+	local A1 = Instance.new('Attachment',Char)
+	local A2 = Instance.new('Attachment',Players.LocalPlayer.Character.HumanoidRootPart)
+	H.Parent = A2
+	H.Attachment0 = A2
+	H.Attachment1 = A1
+	H.Name = "Beam Esp"
+end
+function ClearHG()
+	for _,v in workspace:GetDescendants() do
+		if v.Name == "Light" and v:IsA('Highlight') then
+			v:Destroy()
+		end
+	end
+end
+]]
 function ClosedUi()
 	--ClearHG()
 	--ClearEsp()
@@ -1173,3 +1254,4 @@ local TextButton = Tab.Toggle({
 		end
 	end,
 })
+
